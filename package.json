@@ -1,0 +1,19 @@
+{
+  "name": "wanna-front-end",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TILoom6/WannaFrontEnd.git"
+  },
+  "author": "yoshi, iida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TILoom6/WannaForntEnd/issues"
+  },
+  "homepage": "https://github.com/TILoom6/WannaForntEnd#readme"
+}
