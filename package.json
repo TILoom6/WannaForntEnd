@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "$(npm bin)/mocha $(find test -name '*.js') --require intelli-espower-loader"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,13 +16,16 @@
     "url": "https://github.com/TILoom6/WannaForntEnd/issues"
   },
   "homepage": "https://github.com/TILoom6/WannaForntEnd#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "^components/(.+)$": "<rootDir>/src/components/$1"
+    }
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "intelli-espower-loader": "^1.0.1",
-    "mocha": "^5.0.1",
-    "power-assert": "^1.4.4",
+    "jest": "^22.4.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
