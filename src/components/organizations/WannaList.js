@@ -1,9 +1,15 @@
 import React from "react";
+import Wanna from "../enhancements/Wanaa";
 
 class WannaList extends React.Component {
   render() {
-    return <div>WannaList</div>;
+    return (
+      <div>
+        WannaList
+        <Wanna />
+      </div>
+    );
   }
 }
 
-export default Wanna;
+export default WannaList;
