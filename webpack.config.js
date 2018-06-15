@@ -3,6 +3,7 @@
 
 const path = require("path");
 const webpack = require("webpack");
+const bodyParser = require("body-parser");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const BASE_PLUGINS = [
@@ -31,7 +32,38 @@ module.exports = {
     contentBase: "public/",
     historyApiFallback: true,
     port: 8080,
-    hot: true
+    hot: true,
+    before: function(app) {
+      app.use(bodyParser());
+
+      const db = [];
+      for (let i = 0; i < 30; i++) {
+        db.push({
+          wannnatagId: i,
+          title: "example title",
+          body: "example body\n".repeat(10),
+          username: "exampleUser",
+          postDate: new Date().getTime() + i * 10000,
+          isOwner: i % 3 === 0
+        });
+      }
+      app.get("/wannatags", (req, res) => {
+        res.json(db);
+      });
+      app.post("/wannatag", (req, res) => {
+        const data = Object.assign(
+          {
+            wannnatagId: db.length + 10000,
+            postDate: new Date().getTime(),
+            // temporaly
+            isOwner: true
+          },
+          req.body
+        );
+        db.push(data);
+        res.send(200);
+      });
+    }
   },
   plugins:
     process.env.NODE_ENV === "production"
