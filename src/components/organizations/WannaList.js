@@ -1,5 +1,5 @@
 import React from "react";
-import Wanna from "../enhancements/Wanaa";
+import Wanna from "../enhancements/Wanna";
 
 class WannaList extends React.Component {
   constructor(props) {
