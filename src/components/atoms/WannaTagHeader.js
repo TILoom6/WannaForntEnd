@@ -1,9 +1,11 @@
+/** @flow */
 import React from "react";
 
-class WannaTagHeader extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+type Props = {
+  title: string
+};
+
+class WannaTagHeader extends React.Component<Props> {
   render() {
     return <div>{this.props.title}</div>;
   }
