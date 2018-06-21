@@ -5,7 +5,7 @@ class WannaTagHeader extends React.Component {
     super(props);
   }
   render() {
-    return <div>{props.title}</div>;
+    return <div>{this.props.title}</div>;
   }
 }
 
