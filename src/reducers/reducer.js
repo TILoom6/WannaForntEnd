@@ -16,19 +16,24 @@ const reducer = (state = initialState, action) => {
       return state;
     }
     case "SETTEXT": {
-      return console.log(action.value);
+      console.log(action.value);
+      return state;
     }
     case "ADDTASK": {
-      return console.log(action.value);
+      console.log(action.value);
+      return state;
     }
     case "ENDTASK": {
-      return console.log(action.value);
+      console.log(action.value);
+      return state;
     }
     case "UPDTASK": {
-      return console.log(action.value);
+      console.log(action.value);
+      return state;
     }
     case "DELTASK": {
-      return console.log(action.value);
+      console.log(action.value);
+      return state;
     }
     default: {
       return state;
