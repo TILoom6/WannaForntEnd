@@ -8,7 +8,7 @@ import WannaList from "../organizations/WannaList";
 
 class WannaTagList extends React.Component {
   componentDidMount() {
-    this.props.fetchWannatags();
+    this.props.initialFetchWannatags();
   }
 
   render() {
@@ -16,7 +16,11 @@ class WannaTagList extends React.Component {
       <div>
         <Header />
         WannaTagList
-        <WannaList wannatags={this.props.wannatags} />
+        {this.props.isLoading ? (
+          <div>loading...</div>
+        ) : (
+          <WannaList wannatags={this.props.wannatags} />
+        )}
         <Footer />
       </div>
     );
@@ -29,8 +33,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchWannatags() {
-      fetchWannatags(dispatch);
+    initialFetchWannatags() {
+      fetchWannatags(dispatch, new Date().getTime());
     }
   };
 };
