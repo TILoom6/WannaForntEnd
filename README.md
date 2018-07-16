@@ -10,6 +10,8 @@
 - Redux
 - Jest
 
+ttt
+
 ## Getting Start
 
 ### install
