@@ -1,8 +1,8 @@
 import React from "react";
 import Wanna from "../enhancements/Wanna";
 
-const WannaList = props => {
-  const deleteWanna = id => {
+const WannaList = (props: { wannatags: Array<any> }) => {
+  const deleteWanna = () => {
     throw Error("not implemented");
   };
   const wannaListStyle = {

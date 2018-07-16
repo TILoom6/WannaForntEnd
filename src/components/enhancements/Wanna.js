@@ -1,6 +1,9 @@
 import React from "react";
 
-class Wanna extends React.Component {
+class Wanna extends React.Component<{
+  id: string,
+  func: Function
+}> {
   constructor(props) {
     super(props);
   }
@@ -22,7 +25,7 @@ class Wanna extends React.Component {
       </div>
     );
   }
-  onClick(e) {
+  onClick() {
     this.props.func(this.props.id);
   }
 }

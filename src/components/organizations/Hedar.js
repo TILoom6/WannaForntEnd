@@ -1,12 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-class Heder extends React.Component {
+class Heder extends React.Component<{
+  dispatch: Function,
+  index: number
+}> {
   constructor(props) {
     super(props);
   }
   render() {
-    var count = { count: this.props.index };
     return (
       <div>
         Heder
@@ -14,7 +16,7 @@ class Heder extends React.Component {
       </div>
     );
   }
-  func(e) {
+  func() {
     console.log(this.props);
     this.props.dispatch({
       type: "SETINDEX",

@@ -6,7 +6,11 @@ import Header from "../organizations/Hedar";
 import Footer from "../organizations/Footer";
 import WannaList from "../organizations/WannaList";
 
-class WannaTagList extends React.Component {
+class WannaTagList extends React.Component<{
+  initialFetchWannatags: Function,
+  isLoading: boolean,
+  wannatags: Array<any>
+}> {
   componentDidMount() {
     this.props.initialFetchWannatags();
   }
